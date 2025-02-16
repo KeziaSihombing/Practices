@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">  
+  <title>Sunnyside Agency</title>
+  
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: relative; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section class="header-container" style="position: relative;">
+    <picture class="background">
+      <source media="(max-width:599px)" srcset="./images/mobile/image-header.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-header.jpg">
+      <img src="./images/desktop/image-header.jpg">
+    </picture>
+    <nav>
+      <h3 class="barlow-bold logo">sunnyside</h3>
+      <section class="navbutton">
+        <button class="barlow">About</button>
+        <button class="barlow">Services</button>
+        <button class="barlow">Testimonials</button>
+        <button class="contact fraunces">Contact</button>
+      </section>
+      <section class="burger">
+        <button class="burger-icon"><img src="./images/icon-hamburger.svg"></button>
+      </section>
+    </nav>
+    <section class="menu-container">
+      <div class="mobile-menu">
+        <button class="barlow">About</button>
+        <button class="barlow">Services</button>
+        <button class="barlow">Testimonials</button>
+        <button class="contact fraunces">Contact</button>
+      </div>
+    </section>
+    <script>
+      const button = document.getElementsByClassName("burger-icon")[0];
+      const menu = document.querySelectorAll(".menu-container")[0];
+      
+      button.addEventListener("click", ()=>{
+        if(menu.style.display === "none" || menu.style.display === ""){
+          menu.style.display = "flex";
+        }else{
+          menu.style.display = "none";
+        }
+      })
+    </script>
+    <section class="header">
+      <h1>WE ARE CREATIVE</h1>
+      <img class="arrow-down" src="./images/icon-arrow-down.svg">
+    </section>
+  </section>
+  <section class="about" style="position: relative;">
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-transform.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-transform.jpg">
+      <img class="pict1" src="./images/desktop/image-transform.jpg">
+    </picture>
+    <div class="text1">
+      <h2 class="fraunces">Transform your brand</h2>
+      <p class="barlow">We are a full-service creative agency specializing in helping brands grow fast.
+        Engage your clients through compelling visuals that do most of the marketing for you.
+      </p>
+      <a class="fraunces">LEARN MORE</a>
+    </div>
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-stand-out.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-stand-out.jpg">
+      <img class="pict2" src="./images/desktop/image-stand-out.jpg">
+    </picture>
+    <div class="text2">
+      <h2 class="fraunces">Stand out to the right audience</h2>
+      <p class="barlow">Using a collaborative formula og designers, researchers, photographers, 
+        videographers, and copywriters, we'll build and extend yout brand in digital places
+      </p>
+      <a class="fraunces">LEARN MORE</a>
+    </div>
+    <div class="service1">
+      <h3 class="fraunces">Graphic Design</h3>
+      <p class="barlow">Great design makes you memorable. We deliver artwork that underscore your brand message and captures potensial client's attention</p>
+    </div>
+    <div class="service2">
+      <h3 class="fraunces">Photography</h3>
+      <p class="barlow">Increase your creability by getting the most stunning, high quality photos that improve your business image.</p>
+    </div>
+  </section>
+  <section class="testimony">
+    <h3 class="fraunces test-title">CLIENT TESTIMONIALS</h3>
+    <div class="client-flex">
+      <div class="flex1">
+        <img src="./images/image-emily.jpg">
+        <p class="barlow test-text">We put our trust in Sunnyside and they delivered, making sure our needs were met and deadline were always hit</p>
+        <h3 class="fraunces">Emily R.</h3>
+        <p class="barlow job">Marketing director</p>
+      </div>
+      <div class="flex2">
+        <img src="./images/image-thomas.jpg">
+        <p class="barlow test-text">Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.</p>
+        <h3 class="fraunces">Thomas S.</h3>
+        <p class="barlow job">Chief Operating Officer</p>
+      </div>
+      <div class="flex3">
+        <img src="./images/image-jennie.jpg">
+        <p class="barlow test-text">Incredible end result! Our sales increased over 400% when we work with Sunnyside. Highly recommended!</p>
+        <h3 class="fraunces">Jennie F.</h3>
+        <p class="barlow job">Business Owner</p>
+      </div>
+    </div>
+  </section> 
+  <section class="gallery">
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-gallery-milkbottles.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-gallery-milkbottles.jpg">
+      <img class="gallery1" src="./images/desktop/image-gallery-milkbottles.jpg">
+    </picture>
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-gallery-orange.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-gallery-orange.jpg">
+      <img class="gallery2" src="./images/desktop/image-gallery-orange.jpg">
+    </picture>
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-gallery-cone.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-gallery-cone.jpg">
+      <img class="gallery3" src="./images/desktop/image-gallery-cone.jpg">
+    </picture>
+    <picture>
+      <source media="(max-width:599px)" srcset="./images/mobile/image-gallery-sugar-cubes.jpg">
+      <source media="(min-width:600px)" srcset="./images/desktop/image-gallery-sugarcubes.jpg">
+      <img class="gallery4" src="./images/desktop/image-gallery-sugarcubes.jpg">
+    </picture>
+  </section>
+  <footer>
+    <h3 class="barlow-bold logo">sunnyside</h3>
+    <section class="footer-buttons">
+      <button class="barlow">About</button>
+      <button class="barlow">Services</button>
+      <button class="barlow">Testimonials</button>
+    </section>
+    <section class="icons">
+      <img src="./images/icon-facebook.svg">
+      <img src="./images/icon-instagram.svg">
+      <img src="./images/icon-twitter.svg">
+      <img src="./images/icon-pinterest.svg">
+    </section>
+  </footer>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
