@@ -1,0 +1,571 @@
+html, body{
+    height: 100%;
+    background-color: hsl(168, 48%, 64%);
+    margin: 0px;
+}
+
+.barlow-semibold {
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-size: 28px;
+    font-style: normal;
+}
+
+.barlow{
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.barlow-bold{
+    font-family: "Barlow", serif;
+    font-weight: 900;
+    font-size: 28px;
+    font-style: normal;
+}
+
+.fraunces{
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.header-container{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 8.8; 
+}
+
+.background{
+    position: absolute;
+    z-index: 0;
+    max-width: 100%;
+}
+
+.background img{
+    max-width: 100%;
+}
+
+*:not(picture){
+    z-index: 1;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: hsl(195, 95%, 60%);
+    height: fit-content;
+    width: 100%;   
+    color: white;
+}
+
+.navbutton{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+    width: 100%;
+    margin-right: 20px;
+}
+
+.logo{
+    margin-left: 20px;
+}
+
+.navbutton button:not(.contact){
+    border: none;
+    background-color: inherit;
+    color: white;
+    font-size: 15px;
+
+}
+
+.contact{
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+.contact:hover{
+    cursor: pointer;
+    background-color: hsla(195, 72%, 79%, 40%);
+    color: white;
+}
+
+.burger{
+    display: none
+}
+
+.mobile-menu {
+    width: 380px;
+    height: 380px;
+    background: white;
+    position: relative;
+    border-radius: 5px;
+    display: none;
+  }
+.mobile-menu:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid white;
+    border-left: 20px solid transparent;
+  }
+
+.header{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1{
+    font-family: "Fraunces", serif;
+    font-weight: 1000;
+    font-size: 7vw;
+    margin: 20px;
+    color: white;
+    text-align: center;
+}
+
+.header img{
+    width: 3%;
+    margin-top: 3vw;
+}
+
+.about{
+    position: relative;
+    display: grid;
+    grid-template-areas: 
+    'text1 pict1'
+    'pict2 text2'
+    'service1 service2';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.text1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh;
+    grid-area: text1;
+    margin: 0px;
+    background-color: white;
+}
+
+.text1 a, .text2 a{
+    font-size: 2vw;
+    text-decoration: underline;
+    text-decoration-thickness: 10px;
+}
+
+.text1 a{    
+    text-decoration-color: hsla(51, 100%, 49%, 50%);
+}
+
+.text1 a:hover{    
+    text-decoration-color: hsl(51, 100%, 49%);    
+}
+
+.text2 a{    
+    text-decoration-color: hsla(7, 99%, 70%, 50%);
+}
+
+.text2 a:hover{
+    text-decoration-color: hsl(7, 99%, 70%);
+}
+.about div h2{
+    font-size: 3vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+.about div p{
+    font-size: 2vw;
+    margin: 3vw 0vw;
+    padding: 0px;
+    color: hsl(210, 4%, 67%);
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3vh;
+    grid-area: text2;
+    margin: 0px;
+    background-color: white;
+}
+
+.about picture{
+    display: contents;
+}
+
+.pict1{
+    display: grid;
+    grid-area: pict1;
+    object-fit: fill;
+    width: 100%;
+}
+
+.pict2{
+    display: grid;
+    grid-area: pict2;
+    object-fit: fill;
+    width: 100%;
+}
+
+.service1, .service2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-area: service1;
+    text-align: center;
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-size: 100%;
+    padding: 3vh;
+}
+
+.service1 h3, .service2 h3{
+    font-size: 2vw;
+}
+
+.service1 p, .service2 p{
+    margin: 0vh 0vh 3vh 0vh!important;
+    color: hsl(212, 27%, 19%) !important;
+}
+
+.service2{
+    grid-area: service2;
+    background-image: url(./images/desktop/image-photography.jpg);
+}
+
+.testimony{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.test-title{
+    margin: 0;
+    padding: 15vh 0vh;
+    font-size: 1.5vw;
+    text-align: center;
+    color: hsl(232, 10%, 55%);
+}
+
+.client-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 20px;
+    width: 90%;
+}
+
+.client-flex img{
+    width: 10vh;
+    border-radius: 100%;    
+}
+
+.client-flex h3{
+    color: hsl(212, 27%, 19%);
+    font-size: 1.5vw;
+}
+
+.test-text{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 1vw;
+    color: hsl(212, 27%, 19%);
+    line-height: 40px;
+}
+
+.job{
+    margin-bottom: 15vh;
+    color: hsl(210, 4%, 67%);
+    font-size: 1vw;
+}
+
+.gallery{
+    display: flex;
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    background-color: hsl(168, 48%, 64%);
+}
+
+footer .logo{
+    color: hsl(167, 40%, 24%);
+    margin: 0vh;
+    padding: 5vh 0vh 3vh 0vh;
+    text-align: center;
+}
+
+.footer-buttons{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    column-gap: 2vh;
+    margin-bottom: 5vh;
+}
+
+.footer-buttons button{
+    border: none;
+    background-color: inherit;
+    color:  hsl(167, 40%, 24%);
+    font-size: 1vw;
+}
+
+.footer-buttons button:hover{
+    color: white;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    column-gap: 2vh;
+    padding-bottom: 5vh;
+}
+
+.icons img:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+
+
+  @media only screen and (max-width: 1000px) {
+    .header img{
+        width: 3%;
+        margin-top: -2vw;
+    }
+
+    .test-title{
+        padding: 10vh 0vh;
+    }
+
+    .job{
+        margin-bottom: 10vh;
+    }
+
+    .test-text{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.5vw;
+        line-height: 30px;
+    }
+
+  }
+
+  @media only screen and (max-width: 599px) {
+    .header-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3 / 4.3;
+    }
+
+    .navbutton{
+        display: none;
+    }
+
+    .burger{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .burger button{
+        border: none;
+        background-color: inherit;
+    }
+
+    .burger img{
+        height: 15px;
+    }
+
+    .menu-container{
+        display: none;
+        width: 100%;
+        justify-content: flex-end;
+        position: absolute; 
+        z-index: 4;
+    }
+
+    .mobile-menu{
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 25px;
+    }
+
+    .mobile-menu button:not(.contact){
+        border: none;
+        background-color: inherit;
+        color: hsl(232, 10%, 55%);
+    }
+
+    .contact{
+        width: 90px;
+        height: 35px;
+        border-radius: 20px;
+        border: 1px solid transparent;
+        background-color: hsl(51, 100%, 49%);
+    }
+
+    .header h1{
+        font-size: 13vw;
+    }
+
+    .header img{
+        width: 10%;
+        margin-top: 8vw;
+    }
+
+    .about{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text1, .text2{
+        align-items: center;
+        height: 30vh;
+        padding: 6vh;
+        text-align: center;
+    }
+    
+    .service1, .service2{
+        background-image: url(./images/mobile/image-graphic-design.jpg);
+        align-items: center;
+        height: 55vh;
+        padding: 6vh;
+        text-align: center;
+        justify-content: flex-end;
+    }
+
+    .service2{
+        background-image: url(./images/mobile/image-photography.jpg);
+    }
+
+    .about div h2{
+        font-size: 8vw;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .about div p{
+        font-size: 4vw;
+        margin: 3vw 0vw;
+        padding: 0px;
+        color: hsl(210, 4%, 67%);
+    }
+
+    .about div a{
+        font-size: 3vw;
+        text-decoration: underline;
+        text-decoration-thickness: 10px;
+        text-decoration-color: yellow;
+    }
+
+    .service1 h3, .service2 h3{
+        font-size: 4vw;
+        margin: 0;
+    }
+    
+    .service1 p, .service2 p{
+        margin: 0 !important;
+        color: hsl(212, 27%, 19%) !important;
+    }
+
+    .client-flex{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .test-title{
+        margin: 0;
+        padding: 5vh 0vh;
+        font-size: 3vw;
+        letter-spacing: 1vw;
+    }
+
+    .client-flex h3{
+        font-size: 3vw;
+    }
+    
+    .test-text{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 3.5vw;
+        padding: 0px 60px;
+        color: hsl(212, 27%, 19%);
+        line-height: 40px;
+    }
+    
+    .job{
+        margin-bottom: 5.5vh;
+        font-size: 3vw;
+    }
+
+    .testimony{
+        padding-bottom: 40px;
+    }
+
+    .gallery{
+        display: grid;
+        grid-template-areas: 
+        'gallery1 gallery2'
+        'gallery3 gallery4';
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .gallery1{
+        grid-area: gallery1;
+        height: 100%;
+    }
+    
+    .gallery2{
+        grid-area: gallery2;
+        height: 100%;
+    }
+    
+    .gallery3{
+        grid-area: gallery3;
+        height: 100%;
+    }
+    
+    .gallery4{
+        grid-area: gallery4;
+        height: 100%;
+    }
+
+    .footer-buttons button{
+        font-size: 3vw;
+    }  
+    
+    
+  }
