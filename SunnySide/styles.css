@@ -79,7 +79,7 @@ nav{
     border: none;
     background-color: inherit;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
 
 }
 
@@ -88,6 +88,12 @@ nav{
     height: 40px;
     border-radius: 20px;
     border: 1px solid transparent;
+}
+
+.contact:hover{
+    cursor: pointer;
+    background-color: hsla(195, 72%, 79%, 40%);
+    color: white;
 }
 
 .burger{
@@ -157,6 +163,27 @@ nav{
     background-color: white;
 }
 
+.text1 a, .text2 a{
+    font-size: 2vw;
+    text-decoration: underline;
+    text-decoration-thickness: 10px;
+}
+
+.text1 a{    
+    text-decoration-color: hsla(51, 100%, 49%, 50%);
+}
+
+.text1 a:hover{    
+    text-decoration-color: hsl(51, 100%, 49%);    
+}
+
+.text2 a{    
+    text-decoration-color: hsla(7, 99%, 70%, 50%);
+}
+
+.text2 a:hover{
+    text-decoration-color: hsl(7, 99%, 70%);
+}
 .about div h2{
     font-size: 3vw;
     margin: 0px;
@@ -168,13 +195,6 @@ nav{
     margin: 3vw 0vw;
     padding: 0px;
     color: hsl(210, 4%, 67%);
-}
-
-.about div a{
-    font-size: 2vw;
-    text-decoration: underline;
-    text-decoration-thickness: 10px;
-    text-decoration-color: yellow;
 }
 
 .text2{
@@ -315,11 +335,19 @@ footer .logo{
     font-size: 1vw;
 }
 
+.footer-buttons button:hover{
+    color: white;
+}
+
 .icons{
     display: flex;
     justify-content: center;
     column-gap: 2vh;
     padding-bottom: 5vh;
+}
+
+.icons img:hover{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
 
@@ -536,7 +564,7 @@ footer .logo{
     }
 
     .footer-buttons button{
-        font-size: 2vw;
+        font-size: 3vw;
     }  
     
     
